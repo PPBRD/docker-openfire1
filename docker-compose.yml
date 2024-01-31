@@ -1,0 +1,12 @@
+version: '2'
+services:
+  openfire:
+    image: sdwan/openfire:4.8.0
+    ports:
+      - "9090:9090/tcp"
+      - "9091:9091/tcp"
+      - "5222:5222/tcp"
+      - "7777:7777/tcp"
+    volumes:
+      - /srv/docker/openfire/data:/var/lib/openfire
+      - /srv/docker/openfire/logs:/var/log/openfire
